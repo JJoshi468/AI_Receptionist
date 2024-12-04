@@ -47,6 +47,9 @@ python flask_app.py
 ### 6. Sample user queries
 It can be found in training data in 'improve model.py'.
 
+### 7. MongoDB command to get data from collection
+collection.find_one()
+
 ## Accessing the Admin Page
 Navigate to `/admin` in your browser after starting the application.
 
