@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .confirmation-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: inline-block;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+        }
+        .error {
+            color: #F44336;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="confirmation-box">
+        {% if msg %}
+            <h1>Scheduling Error</h1>
+            <p class="error">{{ msg }}</p>
+        {% else %}
+            
+            
+            <p><strong> Appointment Details</strong></p>
+            <p><strong>Name:</strong> {{ customer_name }}</p>
+            <p><strong>Service:</strong> {{ service }}</p>
+            <p><strong>Requested Date:</strong> {{ requested_date }}</p>
+            <p><strong>Start Time:</strong> {{ requested_time }}</p>
+
+            <div id="message">
+                {% if message %}
+                    <p>{{message}}</p>
+                {% endif %}    
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Receptionist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #response {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ABC Tech Solutions</h1>
+    <div class="container">        
+        <div class="section">
+            <h2>Customer Inquiry</h2>
+            <form action="/query" method="post">
+                <label for="query">Ask a Question</label>
+                <textarea id="query" name="query" rows="4" placeholder="You can ask about services and book appointments."></textarea>
+                <button type="submit">Submit Query</button>
+            </form>
+            <div id="resp">
+                {% if resp %}
+                    <p>{{resp}}</p>
+                {% endif %}    
+            </div>
+            <div id="resp_g">
+                {% if resp_g %}
+                    <p>Gujarati Translation: {{ resp_g }}</p>
+                {% endif %}
+            </div>
+        </div>
+        
+
+        <div class="section">
+            <h2>Business Information</h2>
+            <p><strong>Contact:</strong> support@techsolutions.com | +1-555-123-4567</p>
+        </div>
+    </div>
+</body>
+</html>
