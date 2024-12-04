@@ -53,6 +53,13 @@ collection.find_one()
 ## Accessing the Admin Page
 Navigate to `/admin` in your browser after starting the application.
 
+## Performance issues
+The model trained for intent identification may function abnormally due to lack of greater training data.
+In that case we can change the function schedule appointment like,
+In lines, 71 and 90 changing if conditions to: "if 'service' in query" ,"if 'schedule' in query or 'book' in query" respectively
+(for temporary purposes)
+For long run, train model with larger training data. We can also use opensource llms like llama.
+
 ## Troubleshooting
 - Ensure all dependencies are installed
 - Verify your OpenAI API key is valid and active
