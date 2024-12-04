@@ -44,6 +44,8 @@ pip install -r requirements.txt
 ```bash
 python flask_app.py
 ```
+### 6. Sample user queries
+It can be found in training data in 'improve model.py'.
 
 ## Accessing the Admin Page
 Navigate to `/admin` in your browser after starting the application.
